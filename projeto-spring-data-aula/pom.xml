@@ -16,6 +16,7 @@
 
 	<dependencies>
 
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -24,25 +25,18 @@
 		</dependency>
 
 
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.2-1003-jdbc4</version>
-		</dependency>-->
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+		
 <dependency>
-    <groupId>org.postgresql</groupId>
-    <artifactId>postgresql</artifactId>
-    <version>42.6.0</version>
+	<groupId>org.postgresql</groupId>
+	<artifactId>postgresql</artifactId>
+	<version>42.2.13</version>
 </dependency>
+		
+
 
 <dependency>
-
     <groupId>org.slf4j</groupId>
-
     <artifactId>slf4j-simple</artifactId>
-
     <version>1.7.30</version>    
 
 </dependency>
@@ -88,5 +82,10 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>com.dev</groupId>
+			<artifactId>loja</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
