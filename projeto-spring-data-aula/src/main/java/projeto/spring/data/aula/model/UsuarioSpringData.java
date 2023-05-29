@@ -18,13 +18,13 @@ import javax.persistence.Version;
 
 import org.hibernate.annotations.NaturalId;
 
-@Entity
-@Table(name = "usuariobanco", uniqueConstraints
-			= {@UniqueConstraint(columnNames={"login", "senha", "cpf"})})
+//@Entity
+//@Table(name = "usuariobanco", uniqueConstraints
+//			= {@UniqueConstraint(columnNames={"login", "senha", "cpf"})})
 
-@SequenceGenerator(initialValue = 1, name = "usuario_sequence")
-public class UsuarioSpringData {
-
+//@SequenceGenerator(initialValue = 1, name = "usuario_sequence")
+//public class UsuarioSpringData {
+/*
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="usuario_sequence")
 	private Long id;
@@ -118,5 +118,5 @@ public class UsuarioSpringData {
 	public void setIdade(int idade) {
 		this.idade = idade;
 	}
-
-}
+*/
+//}

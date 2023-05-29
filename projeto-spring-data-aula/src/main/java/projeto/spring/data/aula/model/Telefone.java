@@ -7,9 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-@Entity
-public class Telefone {
-
+//@Entity
+//public class Telefone {
+/*
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -53,5 +53,5 @@ public class Telefone {
 	public void setUsuarioSpringData(UsuarioSpringData usuarioSpringData) {
 		this.usuarioSpringData = usuarioSpringData;
 	}
-
-}
+*/
+//}

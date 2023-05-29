@@ -14,12 +14,12 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import projeto.spring.data.aula.model.UsuarioSpringData;
+//import projeto.spring.data.aula.model.UsuarioSpringData;
 
-@Repository
-public interface InterfaceSpringDataUser   
-extends CrudRepository<UsuarioSpringData, Long> {
-	
+//@Repository
+//public interface InterfaceSpringDataUser   
+//extends CrudRepository<UsuarioSpringData, Long> {
+	/*
 	@Async
 	@Transactional(readOnly = true)
 	@Query(value = "select p from UsuarioSpringData p where p.nome like %?1%")
@@ -55,5 +55,5 @@ extends CrudRepository<UsuarioSpringData, Long> {
 	@Modifying
 	@Transactional
 	@Query("update UsuarioSpringData u set u.email = ?1 where u.nome = ?2")
-	public void updateEmailPorNome(String email, String nome);
-}
+	public void updateEmailPorNome(String email, String nome);*/
+//}
