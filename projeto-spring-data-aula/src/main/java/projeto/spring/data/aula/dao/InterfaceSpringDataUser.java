@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 import projeto.spring.data.aula.model.UsuarioSpringData;
 
 @Repository
-public interface InterfaceSpringDataUser  
+public interface InterfaceSpringDataUser   
 extends CrudRepository<UsuarioSpringData, Long> {
 	
 	@Async
