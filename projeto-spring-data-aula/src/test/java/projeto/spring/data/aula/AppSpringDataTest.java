@@ -71,6 +71,17 @@ public class AppSpringDataTest {
 		
 	}
 
+	@Test
+	public void testeupdate() {
+		
+		Optional<UsuarioSpringData> usuarioSpringData = interfaceStpringDataUser.findById(1L);
+		
+		UsuarioSpringData data = usuarioSpringData.get();
+		
+		data.setNome("ebc");
+		interfaceStpringDataUser.save(data);
+		
+	}
 	
 
 }
