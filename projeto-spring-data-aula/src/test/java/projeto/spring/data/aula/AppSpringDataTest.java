@@ -26,7 +26,7 @@ public class AppSpringDataTest {
 		
 		UsuarioSpringData usuarioSpringData =  new UsuarioSpringData();
 		
-		usuarioSpringData.setEmail("asbeec@email.com");
+		usuarioSpringData.setEmail("asbeegggc@email.com");
 		usuarioSpringData.setNome("aseec def");
 		usuarioSpringData.setLogin("asbeec");
 		usuarioSpringData.setSenha("12344");
