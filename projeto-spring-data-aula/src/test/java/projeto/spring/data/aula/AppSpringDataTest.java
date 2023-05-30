@@ -26,14 +26,14 @@ public class AppSpringDataTest {
 		
 		UsuarioSpringData usuarioSpringData =  new UsuarioSpringData();
 		
-		usuarioSpringData.setEmail("asbc@email.com");
-		usuarioSpringData.setNome("asbc def");
-		usuarioSpringData.setLogin("asbc");
-		usuarioSpringData.setSenha("1234");
-		usuarioSpringData.setIdade(27);
+		usuarioSpringData.setEmail("asbeec@email.com");
+		usuarioSpringData.setNome("aseec def");
+		usuarioSpringData.setLogin("asbeec");
+		usuarioSpringData.setSenha("12344");
+		usuarioSpringData.setIdade(223);
 		
 		interfaceStpringDataUser.save(usuarioSpringData);
-		System.out.println("Cadastrado com sucesso!");
+		System.out.println("|| Cadastrado com sucesso! ||");
 	}
 
 	@Test
@@ -49,6 +49,8 @@ public class AppSpringDataTest {
 		System.out.println(usuarioSpringData.get().getSenha());
 		System.out.println(usuarioSpringData.get().getId());
 		
+		System.out.println("|| Consultado com sucesso! ||");
+
 	}
 	
 	@Test
@@ -67,6 +69,8 @@ public class AppSpringDataTest {
 			System.out.println(usuarioSpringData.getSenha());
 			System.out.println("----------------");
 			
+			System.out.println("|| Consultado todos com sucesso! ||");
+
 		}
 		
 	}
@@ -81,7 +85,15 @@ public class AppSpringDataTest {
 		data.setNome("ebc");
 		interfaceStpringDataUser.save(data);
 		
+		System.out.println("|| Update cadastro com sucesso! ||");
 	}
 	
+	@Test
+	public void testeDelete() {
+		Optional<UsuarioSpringData> usuarioSpringData = interfaceStpringDataUser.findById(3L);
+		
+		interfaceStpringDataUser.delete(usuarioSpringData.get());
+		System.out.println("|| Deletado com sucesso! ||");
+	}
 
 }
