@@ -138,4 +138,11 @@ public class AppSpringDataTest {
 		interfaceStpringDataUser.deletePorNome("deletar");
 		System.out.println("|| Deletado com sucesso! ||");
 	}
+	
+	@Test
+	public void testeUpdateEmailPorNome() {
+		interfaceStpringDataUser.updateEmailPorNome("ebc.profissional@email.com", "ebc");
+		System.out.println("|| Update Sucesso! ||");
+	}
+	
 }
