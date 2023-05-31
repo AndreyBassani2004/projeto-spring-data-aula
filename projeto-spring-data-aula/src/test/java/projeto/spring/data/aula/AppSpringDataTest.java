@@ -28,7 +28,7 @@ public class AppSpringDataTest {
 		UsuarioSpringData usuarioSpringData =  new UsuarioSpringData();
 		
 		usuarioSpringData.setEmail("asbeegggc@email.com");
-		usuarioSpringData.setNome("aseec def");
+		usuarioSpringData.setNome("deletar");
 		usuarioSpringData.setLogin("asbeec");
 		usuarioSpringData.setSenha("12344");
 		usuarioSpringData.setIdade(223);
@@ -111,6 +111,8 @@ public class AppSpringDataTest {
 			System.out.println(usuarioSpringData.getSenha());
 			System.out.println(usuarioSpringData.getId());
 			System.out.println("---------------------------------------------------");
+			System.out.println("|| Consulta Nome Sucesso! ||");
+
 		}
 	}
 	
@@ -126,6 +128,14 @@ public class AppSpringDataTest {
 		System.out.println(usuarioSpringData.getSenha());
 		System.out.println(usuarioSpringData.getId());
 		System.out.println("---------------------------------------------------");
+		
+		System.out.println("|| Consulta Nome Param Sucesso! ||");
+
 	}
 
+	@Test
+	public void testeDeletePorNome() {
+		interfaceStpringDataUser.deletePorNome("deletar");
+		System.out.println("|| Deletado com sucesso! ||");
+	}
 }
