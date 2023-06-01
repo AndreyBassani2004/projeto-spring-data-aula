@@ -12,6 +12,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import projeto.spring.data.aula.dao.IntefaceSpringDataUser;
+import projeto.spring.data.aula.dao.InterfaceTelefone;
+import projeto.spring.data.aula.model.Telefone;
 import projeto.spring.data.aula.model.UsuarioSpringData;
 
 
@@ -22,13 +24,16 @@ public class AppSpringDataTest {
 	@Autowired
 	private IntefaceSpringDataUser interfaceStpringDataUser;
 	
+	@Autowired
+	private InterfaceTelefone interfaceTelefone;
+	
 	@Test
 	public void testInsert() {
 		
 		UsuarioSpringData usuarioSpringData =  new UsuarioSpringData();
 		
 		usuarioSpringData.setEmail("asbeegggc@email.com");
-		usuarioSpringData.setNome("deletar");
+		usuarioSpringData.setNome("abfdddffc ddebc");
 		usuarioSpringData.setLogin("asbeec");
 		usuarioSpringData.setSenha("12344");
 		usuarioSpringData.setIdade(223);
@@ -49,6 +54,15 @@ public class AppSpringDataTest {
 		System.out.println(usuarioSpringData.get().getNome());
 		System.out.println(usuarioSpringData.get().getSenha());
 		System.out.println(usuarioSpringData.get().getId());
+		System.out.println("-----------------------------------------");
+		
+		for (Telefone telefone : usuarioSpringData.get().getTelefones()){
+			 System.out.println(telefone.getNumero());
+			 System.out.println(telefone.getTipo());
+			 System.out.println(telefone.getId());
+			 System.out.println(telefone.getUsuarioSpringData().getNome());
+			 System.out.println("-----------------------------------------");
+		}
 		
 		System.out.println("|| Consultado com sucesso! ||");
 
@@ -145,4 +159,16 @@ public class AppSpringDataTest {
 		System.out.println("|| Update Sucesso! ||");
 	}
 	
+	@Test
+	public void testeInsertTelefone(){
+		
+		Optional<UsuarioSpringData> usuarioSpringData = interfaceStpringDataUser.findById(1L);
+		
+		Telefone telefone = new Telefone();
+		telefone.setTipo("Casa");
+		telefone.setNumero("857465454");
+		telefone.setUsuarioSpringData(usuarioSpringData.get());
+		
+		interfaceTelefone.save(telefone);
+	}
 }
